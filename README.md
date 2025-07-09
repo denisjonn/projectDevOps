@@ -11,7 +11,6 @@ Automated pipeline for deploying static websites to AWS EC2 using Jenkins and An
 
 ## 📋 Overview
 
-![Pipeline Diagram](https://github.com/denisjonn/projectDevOps/raw/main/pipeline-diagram.png)
 
 1. Developer pushes code to GitHub
 2. Jenkins detects changes and triggers pipeline
