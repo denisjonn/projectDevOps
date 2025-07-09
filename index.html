@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математика для Алисы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">📚</div>
+                <div class="logo-text">
+                    <span class="logo-main">Математика</span>
+                    <span class="logo-sub">для Алисы</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Главная</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Математика для моей няшечки</h1>
+                <p>Ты сдашь все экзамены. Жяйка моя.</p>
+                <div class="hearts">
+                    <span>💖</span>
+                    <span>💖</span>
+                    <span>💖</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <h3>Категории уроков</h3>
+            
+            <div class="category">
+                <div class="category-title">
+                    <div class="category-icon">➤</div>
+                    <div>Алгебра</div>
+                </div>
+                <div class="subcategories">
+                    <div class="subcategory">
+                        <div class="subcategory-title">
+                            <div class="subcategory-icon">►</div>
+                            <div>Линейные функции</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topic active" data-lesson="1">
+                                <div class="topic-icon">▶</div>
+                                <div>Основы линейных функций</div>
+                            </div>
+                            <div class="topic" data-lesson="2">
+                                <div class="topic-icon">▶</div>
+                                <div>Графики линейных функций</div>
+                            </div>
+                            <div class="topic" data-lesson="3">
+                                <div class="topic-icon">▶</div>
+                                <div>Уравнение прямой</div>
+                            </div>
+                            <div class="topic" data-lesson="4">
+                                <div class="topic-icon">▶</div>
+                                <div>Решение задач</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory">
+                        <div class="subcategory-title">
+                            <div class="subcategory-icon">►</div>
+                            <div>хз 1</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topic">
+                                <div class="topic-icon">▶</div>
+                                <div>хз2 пока что</div>
+                            </div>
+                            <div class="topic">
+                                <div class="topic-icon">▶</div>
+                                <div>333</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category">
+                <div class="category-title">
+                    <div class="category-icon">➤</div>
+                    <div>Геометрия</div>
+                </div>
+                <div class="subcategories">
+                    <div class="subcategory">
+                        <div class="subcategory-title">
+                            <div class="subcategory-icon">►</div>
+                            <div>у</div>
+                        </div>
+                        <div class="topics">
+                            <div class="topic">
+                                <div class="topic-icon">▶</div>
+                                <div>бананы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Lesson Content -->
+<!-- В разделе урока заменяем статический контент на динамический -->
+        <div class="lesson-content">
+            <div class="lesson-header">
+                <h2 id="lesson-title">Основы линейных функций</h2>
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <span>Алгебра</span>
+                    <span>›</span>
+                    <span>Линейные функции</span>
+                    <span>›</span>
+                    <span>Основы линейных функций</span>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe id="lesson-video" src="https://www.youtube.com/embed/RQBYG2wOLic" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="lesson-text" id="lesson-content">
+                <!-- Контент будет загружен динамически -->
+            </div>
+        </div>
+        </div>
+
+
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Математика для няшечки</h3>
+                    <p>Гав.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мяу.</h3>
+                    <p>Мур.</p>
+                    <p>Ррр.</p>
+                </div>
+                <div class="footer-section">
+                    <h3></h3>
+                    <p><a href="#" style="color: #fff;">Ня</a></p>
+                    <p><a href="#" style="color: #fff;">Супер=ня</a></p>
+                    <p><a href="#" style="color: #fff;">люблю тебя</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Люблю тебя. Твой Дениска.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="lessons.js"></script>
+</body>
+</html>
