@@ -36,7 +36,7 @@ Automated pipeline for deploying static websites to AWS EC2 using Jenkins and An
 #   - SSH (22) - Your IP
 #   - HTTP (80) - 0.0.0.0/0
 #   - Jenkins (8080) - Your IP
-
+```
 # Install Nginx
 sudo apt update && sudo apt install nginx -y
 sudo systemctl enable nginx && sudo systemctl start nginx
@@ -49,3 +49,43 @@ sudo usermod -aG sudo deployer
 ```bash
 git clone https://github.com/denisjonn/projectDevOps.git
 cd projectDevOps
+```
+
+### 3. Configure Jenkins.
+
+```bash
+# Install Jenkins on Ubuntu
+sudo apt install openjdk-11-jdk -y
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.gpg] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins -y
+sudo systemctl start jenkins
+```
+
+Post-install steps:
+
+Access Jenkins at http://public_IP:8080
+Unlock with initial admin password: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Install suggested plugins, create admin user, install additional plugins:
+ -Ansible
+- SSH Pipeline Steps
+- Git
+
+
+### 4. Configure Credentials
+GitHub Credentials:
+Jenkins → Manage Jenkins → Credentials → System → Global Credentials
+Add credentials with your GitHub access token
+Username: ubuntu (or your EC2 user)
+
+### 5. Configure Ansible
+Edit inventory file, Verify playbook 
+
+### 6. Create Jenkins Pipeline
+New Item → Pipeline
+
+## 🛠️ Usage
+Make changes to your static site files
+
+Commit and push to the main branch:
