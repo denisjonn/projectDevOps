@@ -54,7 +54,6 @@ cd projectDevOps
 ### 3. Configure Jenkins.
 
 ```bash
-# Install Jenkins on Ubuntu
 sudo apt install openjdk-11-jdk -y
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.gpg] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
@@ -85,7 +84,7 @@ Edit inventory file, Verify playbook
 ### 6. Create Jenkins Pipeline
 New Item → Pipeline
 
-## 🛠️ Usage
+##  Usage
 Make changes to your static site files
 
 Commit and push to the main branch:
