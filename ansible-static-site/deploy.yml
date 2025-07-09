@@ -1,0 +1,36 @@
+---
+- name: denis deploys ec2 
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: remove def nginx content
+      file:
+        path: /var/www/html/
+        state: absent
+
+    - name: html
+      file:
+        path: /var/www/html/
+        state: directory
+        mode: '0755'
+
+    - name: copy to nginx
+      copy:
+        src: site-files/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: nginx running
+      service:
+        name: nginx
+        state: started
+        enabled: true
