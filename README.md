@@ -58,7 +58,8 @@ sudo apt install openjdk-11-jdk -y
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo gpg --dearmor -o /usr/share/keyrings/jenkins-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.gpg] https://pkg.jenkins.io/debian-stable binary/" | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt update
-sudo apt install jenkins -y
+sudo apt install -y jenkins
+sudo systemctl enable jenkins
 sudo systemctl start jenkins
 ```
 
