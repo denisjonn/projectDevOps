@@ -9,7 +9,7 @@
 
 Automated pipeline for deploying static websites to AWS EC2 using Jenkins and Ansible. This solution implements CI/CD best practices where every push to the `main` branch triggers an automatic deployment.
 
-## 📋 Overview
+##  Overview
 
 
 1. Developer pushes code to GitHub
@@ -18,16 +18,18 @@ Automated pipeline for deploying static websites to AWS EC2 using Jenkins and An
 4. Nginx restarts to serve updated content
 5. Site becomes immediately available
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 - AWS account with EC2 access
 - Ubuntu 22.04 EC2 instance
 - Jenkins server (can be separate or same instance)
 - Basic knowledge of SSH, Git, and Linux
 
-## 🚀 Setup Guide
+## Setup Guide
+
 
 ### 1. Prepare EC2 Server
+
 ```bash
 # Launch EC2 instance (Ubuntu 22.04 LTS)
 # Configure Security Group rules:
@@ -42,3 +44,8 @@ sudo systemctl enable nginx && sudo systemctl start nginx
 # Create deployment user (optional)
 sudo adduser deployer
 sudo usermod -aG sudo deployer
+
+### 2. Clone Repository
+```bash
+git clone https://github.com/denisjonn/projectDevOps.git
+cd projectDevOps
